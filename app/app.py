@@ -1,12 +1,13 @@
 from flask import Flask, request, render_template
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 
 # initialize the database connection
 database = SQLAlchemy(app)
@@ -41,7 +42,7 @@ def join_guest():
     if not group_size or group_size=='':
         group_size = 1
 
-    guest = Guest(first_name, last_name, email, meal_option, group_size)
+    guest = Guest(first_name, last_name, email, group_size, meal_option)
     database.session.add(guest)
     database.session.commit()
 
