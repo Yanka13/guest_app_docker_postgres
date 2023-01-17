@@ -10,11 +10,11 @@ docker compose up -d
 
 ```
 
-👉 head over to localhost:5000
+👉 Try it by heading over to [localhost:5000](http://localhost:5000/)
 
 👉 To stop & remove containers
 
-``bash
+```bash
 
 docker compose down --volumes
 
