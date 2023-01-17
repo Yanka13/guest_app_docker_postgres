@@ -1,17 +1,18 @@
-# Multi-Container Guests application
+# Guest App with Postgres Container
 
-A simple flask and postgres stack
+A simplistic flask and postgres stack for demo purpose.
 
-To run the app
+👉 To launch the stack
 
-``bash
+```bash
 
 docker compose up -d
 
 ```
 
+👉 head over to localhost:5000
 
-To stop it
+👉 To stop & remove containers
 
 ``bash
 
