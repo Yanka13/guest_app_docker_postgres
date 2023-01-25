@@ -23,7 +23,8 @@ services:
       - DATABASE_URL=postgresql://postgres:password@db:5432/guests_db
       - FLASK_ENV=development
     depends_on:
-      - db
+      - db:
+        condition: service_healthy
 
 volumes:
   postgres_data:
