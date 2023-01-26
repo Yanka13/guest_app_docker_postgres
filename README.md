@@ -2,7 +2,7 @@
 
 A simplistic flask and postgres stack for demo purpose.
 
-👉 To launch the stack
+👉 To launch the stack:
 
 ```bash
 
@@ -12,7 +12,7 @@ docker compose up -d
 
 👉 Try it by heading over to [localhost:5000](http://localhost:5000/)
 
-👉 To stop & remove containers
+👉 To stop & remove containers:
 
 ```bash
 
