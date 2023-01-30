@@ -24,5 +24,6 @@ services:
       - FLASK_ENV=development
     depends_on:
       - db
+    restart: on-failure
 volumes:
   postgres_data:
